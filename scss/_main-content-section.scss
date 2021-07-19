@@ -1,0 +1,67 @@
+.main-content-section {
+  @include site-content-section;
+  max-width: 1600px;
+
+  h2 {
+    @include heading-text;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .individual-content {
+    margin-bottom: 2.5rem;
+    width: 85%;
+    @include margin-center;
+    max-width: 20rem;
+  }
+
+  img {
+    display: block;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.55);
+    width: 100%;
+    overflow: hidden;
+    height: 0%;
+    transition: all 1s ease;
+
+    //for Read More button center styling
+    @include flex-perfect-center;
+
+    a {
+      font-weight: 600;
+      @include button-styling;
+      width: 60%;
+
+      &:hover {
+        background-color: map-get($colors, header-bg);
+        color: map-get($colors, body-bg);
+      }
+    }
+  }
+
+  .container:hover .overlay {
+    height: 50%;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include margin-center;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

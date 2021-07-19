@@ -1,0 +1,113 @@
+footer {
+  padding: $double-spacing;
+  background-color: map-get($colors, header-bg);
+  color: map-get($colors, header-text-color) !important;
+
+  h2 {
+    margin-top: 0;
+    @include heading-text;
+  }
+
+  h2:first-of-type {
+    margin-bottom: $double-spacing;
+  }
+
+  section {
+    margin-bottom: $double-spacing;
+    margin-right: $base-spacing;
+  }
+
+  .contact-info-section {
+    padding-right: 4.2rem;
+  }
+
+  .contact-info-section div {
+    margin-bottom: $base-spacing;
+    #email {
+      color: map-get($colors, header-text-color);
+    }
+
+    .day-text {
+      color: map-get($colors, hover-color);
+    }
+  }
+
+  .contact-info-section div:last-of-type {
+    margin-top: $double-spacing;
+  }
+
+  .company-text {
+    color: map-get($colors, hover-color);
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    margin: $double-spacing $double-spacing $double-spacing 0;
+  }
+
+  label {
+    margin-bottom: $base-spacing;
+    color: map-get($colors, hover-color);
+  }
+
+  input[type='submit'] {
+    width: 10rem;
+    @include margin-center;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    color: map-get($colors, header-text-color);
+    background-color: map-get($colors, hover-color);
+    transition: all 0.5s;
+
+    &:hover {
+      transform: translate(0, -4px);
+    }
+  }
+
+  input {
+    padding: $small-spacing;
+  }
+
+  input:focus {
+    outline: none;
+    border: 1px solid map-get($colors, hover-color);
+  }
+
+  .bottom-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .fab {
+      font-size: $social-media-icon-size;
+      margin: $base-spacing;
+      color: map-get($colors, body-bg);
+      transition: all 0.5s;
+
+      &:hover {
+        color: map-get($colors, hover-color);
+        transform: translate(0, -3px);
+      }
+    }
+  }
+
+  small {
+    display: block;
+    text-align: center;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    @include flex-layout-row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 3 * $base-spacing;
+    padding-right: 3 * $base-spacing;
+    padding-bottom: $small-spacing;
+
+    section {
+      margin-bottom: $base-spacing;
+    }
+  }
+}

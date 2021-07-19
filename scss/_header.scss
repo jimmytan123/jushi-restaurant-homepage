@@ -1,0 +1,67 @@
+header {
+  padding: $base-spacing $double-spacing;
+  background-color: map-get($colors, header-bg);
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    @include heading-text;
+    font-family: $body-font;
+  }
+
+  .main-header {
+    @include flex-layout-row;
+  }
+
+  a {
+    color: map-get($colors, header-text-color);
+  }
+
+  #logo-text {
+    padding-left: $small-spacing;
+    font-size: 1.5rem;
+  }
+
+  #hamburger-icon {
+    color: #fff;
+    font-size: $medium-font-size;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    .nav-logo {
+      @include margin-center;
+      margin-bottom: $base-spacing;
+
+      #logo-text {
+        font-size: $medium-font-size;
+        margin-left: 0.8 * $base-spacing;
+      }
+    }
+  }
+}
+
+.top-bar-phone {
+  padding: $small-spacing $base-spacing;
+  text-align: center;
+  background-color: map-get($colors, body-text-color);
+
+  a {
+    color: map-get($colors, header-text-color);
+    font-weight: 300;
+    font-size: 0.8 * $standard-font-size;
+  }
+
+  .fa,
+  .fab {
+    padding-right: $small-spacing;
+    margin-left: $base-spacing;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    text-align: end;
+
+    a {
+      font-size: $standard-font-size;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+#hamburger-icon {
+  z-index: 9;
+
+  &.menu-show {
+    position: fixed;
+    top: 3rem;
+    right: 2rem;
+  }
+}
+
+.active {
+  .nav-list {
+    @include flex-layout-column;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 5;
+    padding: 5rem 0;
+    transition: all 0.3s;
+  }
+}
+
+.active .item {
+  display: block;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  #hamburger-icon {
+    display: none;
+  }
+}

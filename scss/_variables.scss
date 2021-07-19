@@ -1,0 +1,30 @@
+//font and line height variables
+$body-font: 'Montserrat', sans-serif;
+$heading-font: 'Roboto Slab', serif;
+$line-height: 1.4;
+
+$standard-font-size: 1rem;
+$medium-font-size: 2rem;
+$large-font-size: 3rem;
+
+//spacing
+$small-spacing: 0.5rem;
+$base-spacing: 1rem;
+$double-spacing: 2rem;
+
+//main colors
+$colors: (
+  body-bg: #f8f9fa,
+  body-text-color: #212529,
+  hover-color: #ee6c4d,
+  header-bg: #343a40,
+  header-text-color: #fff,
+);
+
+//media query breakpoints
+$breakpoint-mobile: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+//social media icon size
+$social-media-icon-size: 2.5rem;

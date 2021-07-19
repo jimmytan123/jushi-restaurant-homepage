@@ -1,0 +1,78 @@
+@mixin margin-center {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+@mixin flex-perfect-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-layout-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin flex-layout-column {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin heading-text {
+  letter-spacing: 0.2rem;
+  font-family: $heading-font;
+  font-weight: 300;
+}
+
+@mixin nav-item-medium-styling {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@mixin banner-img {
+  display: block;
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+@mixin abosolute-position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@mixin site-content-section {
+  padding: $double-spacing $base-spacing;
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.8;
+}
+
+@mixin button-styling {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: $small-spacing;
+  border: 1.5px solid black;
+  border-radius: 0.3rem;
+  transition: all 0.5s;
+}

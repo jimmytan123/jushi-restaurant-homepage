@@ -1,0 +1,25 @@
+.at-jushi-section {
+  @include site-content-section;
+  @include margin-center;
+
+  h2 {
+    @include heading-text;
+    font-size: 2rem;
+  }
+
+  p {
+    padding: $base-spacing;
+  }
+
+  a {
+    @include button-styling;
+    font-weight: 600;
+
+    &:hover,
+    &:focus {
+      background-color: map-get($colors, header-bg);
+      color: map-get($colors, body-bg);
+      transform: scale(1.05);
+    }
+  }
+}
